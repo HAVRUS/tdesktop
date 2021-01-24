@@ -56,7 +56,7 @@ void MuteSettingsBox::prepare() {
 	// in fact, this is mute only for 1 year
 	const auto group = std::make_shared<Ui::RadiobuttonGroup>(kForeverHours);
 	y += st::boxOptionListPadding.top();
-	for (const auto hours : { 1, 4, 18, 72, kForeverHours }) {
+	for (const auto hours : { 1, 4, 8, 18, 72, kForeverHours }) {
 		const auto text = [&] {
 			if (hours < 24) {
 				return tr::lng_mute_duration_hours(tr::now, lt_count, hours);
